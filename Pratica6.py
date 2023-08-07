@@ -35,7 +35,7 @@ print('L =',"{:.4f}".format(L_c2),'mH')
 Pcap = Scarga1 * fp1
 QfiH = Pcap*(np.tan(np.arccos(fp1)) - np.tan(np.arccos(0.94)))
 Xfilt = (V**2)/QfiH
-Xcap = (h5*2)*Xfilt/((h5*2)-1)
+Xcap = (h5**2)*Xfilt/((h5**2)-1)
 Qcap = (V**2)/Xcap
 
 #Banco de capacitores-------------
@@ -71,7 +71,7 @@ print('R =',"{:.4f}".format(R),'ohn')
 Pcap = Scarga1 * fp1
 QfiH = Pcap*(np.tan(np.arccos(fp1)) - np.tan(np.arccos(0.94)))/2
 Xfilt = (V**2)/QfiH
-Xcap = (h5*2)*Xfilt/((h5*2)-1)
+Xcap = (h5**2)*Xfilt/((h5**2)-1)
 Qcap = (V**2)/Xcap
 #Banco de capacitores-------------
 Vcapn = np.sqrt(3)*Un_serie*VcapUn
@@ -104,7 +104,7 @@ print('R =',"{:.4f}".format(R5),'ohn')
 Pcap = Scarga1 * fp1
 QfiH = Pcap*(np.tan(np.arccos(fp1)) - np.tan(np.arccos(0.94)))/2
 Xfilt = (V**2)/QfiH
-Xcap = (h7*2)*Xfilt/((h7*2)-1)
+Xcap = (h7**2)*Xfilt/((h7**2)-1)
 Qcap = (V**2)/Xcap
 #Banco de capacitores-------------
 Vcapn = np.sqrt(3)*Un_serie*VcapUn
