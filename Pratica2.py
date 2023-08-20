@@ -22,6 +22,7 @@ CríticoBN = colunaBN.loc[(colunaBN < 110)+(colunaBN > 135)].count()
 AdequadoCN = colunaCN.loc[(colunaCN > 117) & (colunaCN < 133)].count()
 PrecarioCN = colunaCN.loc[((colunaCN > 110) & (colunaCN < 117))+(colunaCN > 133) & (colunaCN < 135)].count()
 CríticoCN = colunaCN.loc[(colunaCN < 110)+(colunaCN > 135)].count()
+
 print('AN')
 print('Adequado:',AdequadoAN,'Precário:', PrecarioAN,'Crítico:', CríticoAN)
 print('BN')
@@ -29,10 +30,11 @@ print('Adequado:',AdequadoBN,'Precário:', PrecarioBN,'Crítico:', CríticoBN)
 print('CN')
 print('Adequado:',AdequadoCN,'Precário:', PrecarioCN,'Crítico:', CríticoCN)
 
-DCR = (max(PrecarioAN, PrecarioBN, PrecarioCN)/1008)*100
-DRP = (max(CríticoAN, CríticoBN, CríticoCN)/1008)*100
-print('DCR:',"{:.2f}".format(DCR)+'%','  Limite: 3%')
-print('DRP:', "{:.2f}".format(DRP)+'%','  Limite: 0,5%')
+DRP = (max(PrecarioAN, PrecarioBN, PrecarioCN)/1008)*100
+DRC = (max(CríticoAN, CríticoBN, CríticoCN)/1008)*100
+
+print('DRP:',"{:.2f}".format(DRP)+'%','  Limite: 3%')
+print('DRC:', "{:.2f}".format(DRC)+'%','  Limite: 0,5%')
 
 x = range(1008)
 y1 = colunaAN
